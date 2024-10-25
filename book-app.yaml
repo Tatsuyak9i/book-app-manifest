@@ -10,7 +10,7 @@ spec:
     targetRevision: main
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: legacy-app
+    namespace: book-app-production
   syncPolicy:
     automated:
       selfHeal: true
