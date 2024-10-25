@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: bookapp
-          image: 'image-registry.openshift-image-registry.svc:5000/demo/bookapp@sha256:c27c4a6901ff80d363f9dea74dfa351e441f65552471d0ab873fda6936d33d48'
+          image: 'image-registry.openshift-image-registry.svc:5000/demo/bookapp:latest
           ports:
             - containerPort: 3000
               protocol: TCP
