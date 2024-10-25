@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: book-app
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/Tatsuyak9i/book-app-manifest.git'
+    path: book-app
+    targetRevision: main
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: legacy-app
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
